@@ -1,20 +1,6 @@
 # Vaadin fluent API for Vaadin 8
 
 This library is a Vaadin 8 server side complement to code components fluently (like builder pattern).
-Each ui component class is available with their fluent counter part working out-of-the-box.
-
-Ex : TextField => FTextField
-
-Each setter has also its fluent version prefixed with the word "with" instead of "set".
-
-Ex: new FTextField().withCaption("test").withRequiredIndicatorVisible(true).withWidth("100px").withPlaceholder("enter text");
-
-Each fluent class implements a fluent interface which adds the fluent methods. 
-Therefore, it's easy to add fluent functionality to an existing component : just implement the right interface.
-
-Lets say you have a custom ComboBox doing fancy stuff in your project and you want to add fluent way to code it. Implement the FluentComboBox interface.
-
-Ex : public class MyComboBox<T> extends ComboBox<T> implements FluentComboBox<MyComboBox<T>, T> {...}
 
 ## Download release
 
@@ -37,10 +23,10 @@ Note that Eclipse may give "Plugin execution not covered by lifecycle configurat
  
 ## Release notes
 
-### Version 1.0-SNAPSHOT
+### Version 1.0
 - FTextField
 - FTextArea
-- FComboBo
+- FComboBox
 - FFormLayout
 - FVerticalLayout
 - FHorizontalLayout
@@ -103,24 +89,20 @@ Thanks to the viritin add-on which have inspired me greatly.
 
 ## Getting started
 
-Here is a simple example on how to try out this addon:
+Each ui component class is available with their fluent counter part working out-of-the-box.
 
-<...>
+Ex : TextField => FTextField
 
+Each setter has also its fluent version prefixed with the word "with" instead of "set".
 
-## Features
+Ex: new FTextField().withCaption("test").withRequiredIndicatorVisible(true).withWidth("100px").withPlaceholder("enter text");
 
-### Feature A
+Each fluent class implements a fluent interface which adds the fluent methods. 
+Therefore, it's easy to add fluent functionality to an existing component : just implement the right interface.
 
-<...>
+Lets say you have a custom ComboBox doing fancy stuff in your project and you want to add fluent way to code it. Implement the FluentComboBox interface.
 
-### Feature B
-
-<...>
-
-### Feature C
-
-<...>
+Ex : public class MyComboBox<T> extends ComboBox<T> implements FluentComboBox<MyComboBox<T>, T> {...}
 
 ## API
 
