@@ -48,7 +48,7 @@ public class FluentComponentTest {
         assertEquals("description", field.getDescription());
         assertEquals("data", field.getData());
         assertEquals(Locale.CANADA, field.getLocale());
-        assertEquals(error, field.isResponsive());
+        assertEquals(true, field.isResponsive());
     }
 
 }
