@@ -5,6 +5,13 @@ import com.vaadin.fluent.api.FluentFieldEvents.FluentBlurNotifier;
 import com.vaadin.fluent.api.FluentFieldEvents.FluentFocusNotifier;
 import com.vaadin.ui.AbstractFocusable;
 
+/**
+ * The base interface for fluent versions of {@link AbstractFocusable}
+ * 
+ * @see AbstractFocusable
+ *
+ * @param <THIS> Self-referential generic THIS
+ */
 public interface FluentAbstractFocusable<THIS extends FluentAbstractFocusable<THIS>>
         extends FluentAbstractComponent<THIS>, FluentFocusable<THIS>, FluentFocusNotifier<THIS>, FluentBlurNotifier<THIS> {
 
@@ -21,7 +28,7 @@ public interface FluentAbstractFocusable<THIS extends FluentAbstractFocusable<TH
      *            A negative value means that the field should not be
      *            included in the tabbing sequence.
      * @return this for method chaining
-     * @see AbstractFocusable#setTabIndex()
+     * @see AbstractFocusable#setTabIndex(int)
      */
     @SuppressWarnings("unchecked")
     @Override

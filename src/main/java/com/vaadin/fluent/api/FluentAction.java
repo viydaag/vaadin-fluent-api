@@ -7,6 +7,13 @@ import com.vaadin.event.Action.ShortcutNotifier;
 import com.vaadin.event.ShortcutListener;
 import com.vaadin.server.Resource;
 
+/**
+ * The base interface for fluent versions of {@link Action}
+ * 
+ * @see Action
+ *
+ * @param <THIS> Self-referential generic THIS
+ */
 public interface FluentAction<THIS extends FluentAction<THIS>> {
 
     /**
@@ -35,6 +42,15 @@ public interface FluentAction<THIS extends FluentAction<THIS>> {
     public interface FluentShortcutNotifier<THIS extends FluentShortcutNotifier<THIS>>
             extends ShortcutNotifier {
 
+        /**
+         * Add a shortcut listener and return a registration object for
+         * unregistering it.
+         *
+         * @param shortcut
+         *            listener to add
+         * @return this (for method chaining)
+         * @see ShortcutNotifier#addShortcutListener(ShortcutListener)
+         */
         @SuppressWarnings("unchecked")
         public default THIS withShortcutListener(ShortcutListener shortcut) {
             this.addShortcutListener(shortcut);
@@ -59,7 +75,7 @@ public interface FluentAction<THIS extends FluentAction<THIS>> {
          * @param actionHandler
          *            the new handler to be added.
          * @return this (for method chaining)
-         * @see #addActionHandler(com.vaadin.event.Action.Handler)
+         * @see Container#addActionHandler(com.vaadin.event.Action.Handler)
          */
         @SuppressWarnings("unchecked")
         public default THIS withActionHandler(Action.Handler actionHandler) {

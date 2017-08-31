@@ -3,6 +3,13 @@ package com.vaadin.fluent.api;
 import com.vaadin.ui.Component;
 import com.vaadin.ui.SingleComponentContainer;
 
+/**
+ * The base interface for fluent versions of {@link SingleComponentContainer}
+ * 
+ * @see SingleComponentContainer
+ * 
+ * @param <THIS> Self-referential generic THIS
+ */
 public interface FluentSingleComponentContainer<THIS extends FluentSingleComponentContainer<THIS>>
         extends SingleComponentContainer, FluentHasComponents<THIS>, FluentHasComponents.FluentComponentAttachDetachNotifier<THIS> {
 

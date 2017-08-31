@@ -9,11 +9,11 @@ import com.vaadin.ui.Panel;
 import com.vaadin.ui.VerticalLayout;
 
 /**
- * A {@link Component} complemented by fluent setters.
- *
- * @param <THIS>
- *            Self-referential generic THIS
+ * The base interface for fluent versions of {@link Component}
+ * 
  * @see Component
+ *
+ * @param <THIS> Self-referential generic THIS
  */
 public interface FluentComponent<THIS extends FluentComponent<THIS>>
         extends Component, FluentSizeable<THIS> {

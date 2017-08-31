@@ -2,6 +2,14 @@ package com.vaadin.fluent.api;
 
 import com.vaadin.data.HasValue;
 
+/**
+ * The base interface for fluent versions of {@link HasValue}
+ * 
+ * @see HasValue
+ * 
+ * @param <THIS> Self-referential generic THIS
+ * @param <ITEM> The value type
+ */
 public interface FluentHasValue<THIS, VALUE>
         extends HasValue<VALUE> {
 
@@ -13,6 +21,7 @@ public interface FluentHasValue<THIS, VALUE>
      * <i>Implementation note:</i> the implementing class should document
      * whether null values are accepted or not.
      *
+     * @see HasValue#setValue(Object)
      * @param value
      *            the new value
      * @return this (for method chaining)
@@ -33,6 +42,7 @@ public interface FluentHasValue<THIS, VALUE>
      * looks visually different to signal to the user that the value cannot be
      * edited.
      *
+     * @see HasValue#setReadOnly(boolean)
      * @param readOnly
      *            a boolean value specifying whether the component is put
      *            read-only mode or not
@@ -48,7 +58,8 @@ public interface FluentHasValue<THIS, VALUE>
      * Sets the required indicator visible or not.
      * <p>
      * If set visible, it is visually indicated in the user interface.
-     *
+     * 
+     * @see HasValue#setRequiredIndicatorVisible(boolean)
      * @param requiredIndicatorVisible
      *            <code>true</code> to make the required indicator visible,
      *            <code>false</code> if not
@@ -64,9 +75,10 @@ public interface FluentHasValue<THIS, VALUE>
      * Adds a value change listener. The listener is called when the value of
      * this {@code HasValue} is changed either by the user or programmatically.
      *
+     * @see HasValue#addValueChangeListener(com.vaadin.data.HasValue.ValueChangeListener)
      * @param listener
      *            the value change listener, not null
-     * @return a registration for the listener
+     * @return this (for method chaining)
      */
     @SuppressWarnings("unchecked")
     public default THIS withValueChangeListener(ValueChangeListener<VALUE> listener) {

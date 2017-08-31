@@ -3,11 +3,11 @@ package com.vaadin.fluent.api;
 import com.vaadin.server.ClientConnector;
 
 /**
- * A {@link ClientConnector} complemented by fluent setters.
- *
- * @param <THIS>
- *            Self-referential generic typeS
+ * The base interface for fluent versions of {@link ClientConnector}
+ * 
  * @see ClientConnector
+ *
+ * @param <THIS> Self-referential generic THIS
  */
 public interface FluentClientConnector<THIS extends FluentClientConnector<THIS>>
         extends ClientConnector {

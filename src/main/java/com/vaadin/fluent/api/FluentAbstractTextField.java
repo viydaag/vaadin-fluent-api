@@ -2,6 +2,13 @@ package com.vaadin.fluent.api;
 
 import com.vaadin.ui.AbstractTextField;
 
+/**
+ * The base interface for fluent versions of {@link AbstractTextField}
+ * 
+ * @see AbstractTextField
+ *
+ * @param <THIS> Self-referential generic THIS
+ */
 public interface FluentAbstractTextField<THIS extends FluentAbstractTextField<THIS>>
         extends FluentAbstractField<THIS, String>, FluentHasValueChangeMode<THIS> {
 

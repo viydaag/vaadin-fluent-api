@@ -4,11 +4,11 @@ import com.vaadin.ui.Component;
 import com.vaadin.ui.ComponentContainer;
 
 /**
- * A {@link ComponentContainer} complemented by fluent setters.
+ * The base interface for fluent versions of {@link ComponentContainer}
  * 
- * @param <THIS>
- *            Self-referential generic THIS
  * @see ComponentContainer
+ *
+ * @param <THIS> Self-referential generic THIS
  */
 public interface FluentComponentContainer<THIS extends FluentComponentContainer<THIS>>
         extends ComponentContainer, FluentHasComponents<THIS>, FluentHasComponents.FluentComponentAttachDetachNotifier<THIS> {
