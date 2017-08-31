@@ -1,4 +1,4 @@
-# Vaadin fluent API for Vaadin 8
+# Fluent API for Vaadin 8
 
 This library is a Vaadin 8 server side complement to code components fluently (like builder pattern).
 
@@ -106,4 +106,4 @@ Ex : public class MyComboBox<T> extends ComboBox<T> implements FluentComboBox<My
 
 ## API
 
-Vaadin fluent API JavaDoc is available online at <...>
+Fluent API for Vaadin JavaDoc is available online at <...>
