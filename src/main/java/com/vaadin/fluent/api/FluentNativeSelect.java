@@ -72,7 +72,7 @@ public interface FluentNativeSelect<THIS extends FluentNativeSelect<THIS, ITEM>,
      * The empty string {@code ""} is the default empty selection caption.
      * <p>
      * If empty selection is allowed via the
-     * {@link #setEmptySelectionAllowed(boolean)} method (it is by default) then
+     * {@link NativeSelect#setEmptySelectionAllowed(boolean)} method (it is by default) then
      * the empty item will be shown with the given caption.
      *
      * @param caption

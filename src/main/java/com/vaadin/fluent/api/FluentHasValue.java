@@ -8,7 +8,7 @@ import com.vaadin.data.HasValue;
  * @see HasValue
  * 
  * @param <THIS> Self-referential generic THIS
- * @param <ITEM> The value type
+ * @param <VALUE> The value type
  */
 public interface FluentHasValue<THIS, VALUE>
         extends HasValue<VALUE> {

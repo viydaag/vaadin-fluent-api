@@ -6,8 +6,6 @@ import com.vaadin.event.FieldEvents;
  * The base interface for fluent versions of {@link FieldEvents}
  * 
  * @see FieldEvents
- *
- * @param <THIS> Self-referential generic THIS
  */
 public interface FluentFieldEvents
         extends FieldEvents {

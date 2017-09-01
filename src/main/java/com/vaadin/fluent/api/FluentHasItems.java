@@ -5,7 +5,6 @@ import java.util.stream.Stream;
 
 import com.vaadin.data.HasItems;
 import com.vaadin.data.provider.BackEndDataProvider;
-import com.vaadin.data.provider.DataProvider;
 import com.vaadin.data.provider.ListDataProvider;
 
 /**
@@ -23,9 +22,8 @@ public interface FluentHasItems<THIS extends FluentHasItems<THIS, ITEM>, ITEM>
      * Sets the data items of this component provided as a collection.
      * <p>
      * The provided items are wrapped into a {@link ListDataProvider} and this
-     * instance is used as a data provider for the
-     * {@link #setDataProvider(DataProvider)} method. It means that the items
-     * collection can be accessed later on via
+     * instance is used as a data provider for the setDataProvider(DataProvider) method. 
+     * It means that the items collection can be accessed later on via
      * {@link ListDataProvider#getItems()}:
      *
      * <pre>
@@ -34,7 +32,7 @@ public interface FluentHasItems<THIS extends FluentHasItems<THIS, ITEM>, ITEM>
      * listing.setItems(Arrays.asList("a","b"));
      * ...
      *
-     * Collection<String> collection = ((ListDataProvider<String>)listing.getDataProvider()).getItems();
+     * Collection&lt;String&gt; collection = ((ListDataProvider&lt;String&gt;)listing.getDataProvider()).getItems();
      * </code>
      * </pre>
      * <p>
@@ -59,17 +57,17 @@ public interface FluentHasItems<THIS extends FluentHasItems<THIS, ITEM>, ITEM>
      * <p>
      * The provided items are wrapped into a {@link ListDataProvider} and this
      * instance is used as a data provider for the
-     * {@link #setDataProvider(DataProvider)} method. It means that the items
+     * setDataProvider(DataProvider) method. It means that the items
      * collection can be accessed later on via
      * {@link ListDataProvider#getItems()}:
      *
      * <pre>
      * <code>
-     * HasDataProvider<String> listing = new CheckBoxGroup<>();
+     * HasDataProvider&lt;String&gt; listing = new CheckBoxGroup&lt;&gt;();
      * listing.setItems("a","b");
      * ...
      *
-     * Collection<String> collection = ((ListDataProvider<String>)listing.getDataProvider()).getItems();
+     * Collection&lt;String&gt; collection = ((ListDataProvider&lt;String&gt;)listing.getDataProvider()).getItems();
      * </code>
      * </pre>
      * <p>
@@ -97,17 +95,17 @@ public interface FluentHasItems<THIS extends FluentHasItems<THIS, ITEM>, ITEM>
      * <p>
      * The provided items are wrapped into a {@link ListDataProvider} and this
      * instance is used as a data provider for the
-     * {@link #setDataProvider(DataProvider)} method. It means that the items
+     * setDataProvider(DataProvider) method. It means that the items
      * collection can be accessed later on via
      * {@link ListDataProvider#getItems()}:
      *
      * <pre>
      * <code>
-     * HasDataProvider&lt;String&gt; listing = new CheckBoxGroup<&gt;();
+     * HasDataProvider&lt;String&gt; listing = new CheckBoxGroup&lt;&gt;();
      * listing.setItems(Stream.of("a","b"));
      * ...
      *
-     * Collection<String> collection = ((ListDataProvider&lt;String&gt;)listing.getDataProvider()).getItems();
+     * Collection&lt;String&gt; collection = ((ListDataProvider&lt;String&gt;)listing.getDataProvider()).getItems();
      * </code>
      * </pre>
      * <p>
