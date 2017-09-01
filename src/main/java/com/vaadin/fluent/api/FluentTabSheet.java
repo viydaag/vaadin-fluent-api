@@ -165,6 +165,7 @@ public interface FluentTabSheet<THIS extends FluentTabSheet<THIS>>
      * The default CloseHandler for TabSheet will only remove the tab.
      *
      * @param handler
+     *              the close handler
      * @return this for method chaining
      * @see TabSheet#setCloseHandler(CloseHandler)
      */
