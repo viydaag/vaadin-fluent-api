@@ -3,11 +3,11 @@ package com.vaadin.fluent.api;
 import com.vaadin.server.Scrollable;
 
 /**
- * A {@link Scrollable} complemented by fluent setters.
+ * The base interface for fluent versions of {@link Scrollable}
  * 
- * @param <THIS>
- *            Self-referential generic THIS THIS
  * @see Scrollable
+ * 
+ * @param <THIS> Self-referential generic THIS
  */
 public interface FluentScrollable<THIS extends FluentScrollable<THIS>>
         extends Scrollable {

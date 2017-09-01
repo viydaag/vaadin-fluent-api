@@ -6,11 +6,11 @@ import com.vaadin.ui.Component;
 import com.vaadin.ui.Layout;
 
 /**
- * A {@link Layout} complemented by fluent setters.
- *
- * @param <THIS>
- *            Self-referential generic THIS
+ * The base interface for fluent versions of {@link Layout}
+ * 
  * @see Layout
+ * 
+ * @param <THIS> Self-referential generic THIS
  */
 public interface FluentLayout<THIS extends FluentLayout<THIS>>
         extends Layout, FluentComponentContainer<THIS> {

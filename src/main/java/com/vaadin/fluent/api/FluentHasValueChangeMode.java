@@ -4,15 +4,23 @@ import com.vaadin.data.HasValue.ValueChangeEvent;
 import com.vaadin.shared.ui.ValueChangeMode;
 import com.vaadin.ui.HasValueChangeMode;
 
+/**
+ * The base interface for fluent versions of {@link HasValueChangeMode}
+ * 
+ * @see HasValueChangeMode
+ * 
+ * @param <THIS> Self-referential generic THIS
+ */
 public interface FluentHasValueChangeMode<THIS extends FluentHasValueChangeMode<THIS>>
         extends HasValueChangeMode, FluentComponent<THIS> {
+
     /**
      * Sets the mode how the TextField triggers {@link ValueChangeEvent}THIS.
      *
      * @param valueChangeMode
      *            the new mode
      *
-     * @see ValueChangeMode
+     * @see HasValueChangeMode#setValueChangeMode(ValueChangeMode)
      * @return this (for method chaining)
      */
     @SuppressWarnings("unchecked")
@@ -31,7 +39,7 @@ public interface FluentHasValueChangeMode<THIS extends FluentHasValueChangeMode<
      * @throws IllegalArgumentException
      *             if given timeout is smaller than 0
      *
-     * @see ValueChangeMode
+     * @see HasValueChangeMode#setValueChangeTimeout(int)
      * @return this (for method chaining)
      */
     @SuppressWarnings("unchecked")

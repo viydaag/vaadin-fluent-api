@@ -3,10 +3,11 @@ package com.vaadin.fluent.api;
 import com.vaadin.server.Sizeable;
 
 /**
- * A {@link Sizeable} complemented by fluent setters.
+ * The base interface for fluent versions of {@link Sizeable}
  * 
- * @param <THIS> Self-referential generic typeS
  * @see Sizeable
+ * 
+ * @param <THIS> Self-referential generic THIS
  */
 public interface FluentSizeable<THIS extends FluentSizeable<THIS>>
         extends Sizeable {

@@ -2,6 +2,13 @@ package com.vaadin.fluent.api;
 
 import com.vaadin.ui.CustomField;
 
+/**
+ * The base interface for fluent versions of {@link CustomField}
+ * 
+ * @see CustomField
+ *
+ * @param <THIS> Self-referential generic THIS
+ */
 public interface FluentCustomField<THIS extends FluentCustomField<THIS, T>, T>
         extends FluentAbstractField<THIS, T>, FluentHasComponents<THIS> {
     /**
@@ -18,6 +25,7 @@ public interface FluentCustomField<THIS extends FluentCustomField<THIS, T>, T>
      * @param focusDelegate
      *            the focusable component to which focus events are redirected
      * @return the configured component
+     * @see CustomField#setFocusDelegate(com.vaadin.ui.Component.Focusable)
      */
     @SuppressWarnings("unchecked")
     public default THIS withFocusDelegate(Focusable focusDelegate) {

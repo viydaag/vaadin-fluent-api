@@ -3,11 +3,11 @@ package com.vaadin.fluent.api;
 import com.vaadin.ui.HasComponents;
 
 /**
- * A {@link HasComponents} complemented by fluent setters.
- *
- * @param <THIS>
- *            Self-referential generic THIS
+ * The base interface for fluent versions of {@link HasComponents}
+ * 
  * @see HasComponents
+ * 
+ * @param <THIS> Self-referential generic THIS
  */
 public interface FluentHasComponents<THIS extends FluentHasComponents<THIS>>
         extends HasComponents, FluentComponent<THIS> {

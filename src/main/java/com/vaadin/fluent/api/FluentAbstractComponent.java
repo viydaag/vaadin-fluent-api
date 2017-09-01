@@ -7,7 +7,7 @@ import com.vaadin.server.ErrorMessage;
 import com.vaadin.ui.AbstractComponent;
 
 /**
- * A {@link AbstractComponent} complemented by fluent setters.
+ * The base interface for fluent versions of {@link AbstractComponent}
  *
  * @param <THIS>
  *            Self-referential generic THIS

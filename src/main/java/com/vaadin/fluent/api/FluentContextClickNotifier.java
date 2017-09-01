@@ -3,11 +3,11 @@ package com.vaadin.fluent.api;
 import com.vaadin.event.ContextClickEvent;
 
 /**
- * A {@link ContextClickEvent.ContextClickNotifier} complemented by fluent
- * setters.
+ * The base interface for fluent versions of {@link ContextClickEvent.ContextClickNotifier}
+ * 
+ * @see ContextClickEvent.ContextClickNotifier
  *
  * @param <THIS> Self-referential generic THIS
- * @see ContextClickEvent.ContextClickNotifier
  */
 public interface FluentContextClickNotifier<THIS extends FluentContextClickNotifier<THIS>>
         extends ContextClickEvent.ContextClickNotifier {
