@@ -4,11 +4,12 @@ This library is a Vaadin 8 server side complement to code components fluently (l
 
 ## Download release
 
-Official releases of this add-on are available at Vaadin Directory. For Maven instructions, download and reviews, go to http://vaadin.com/addon/fluent
+Official releases of this add-on are available at Vaadin Directory. For Maven instructions, download and reviews, go to [http://vaadin.com/addon/fluent](http://vaadin.com/addon/fluent)
 
 ## Development with Eclipse IDE
 
 For further development of this add-on, the following tool-chain is recommended:
+
 - Eclipse IDE
 - m2e wtp plug-in (install it from Eclipse Marketplace)
 - Vaadin Eclipse plug-in (install it from Eclipse Marketplace)
@@ -38,30 +39,36 @@ Note that Eclipse may give "Plugin execution not covered by lifecycle configurat
 - FTwinColSelect
 - FAction
 
-## Roadmap
-
-This component is developed as a hobby with no public roadmap or any guarantees of upcoming releases. That said, the following features are planned for upcoming releases:
+### Version 1.1
 - FButton
+- FNativeButton
 - FNativeSelect
 - FRadionButtonGroup
-- FGrid
-- FTreeGrid
 - FLabel
 - FLink
 - FCheckBox
+- FTabSheet
+- fix missing methods for FluentComboBox
+- update javadoc
+
+## Roadmap
+
+This component is developed as a hobby with no public roadmap or any guarantees of upcoming releases. That said, the following features are planned for upcoming releases:
+
+- FGrid
+- FTreeGrid
 - FMenuBar
 - FProgressBar
 - FPopupView
 - FHorizontalSplitPanel
 - FVerticalSplitPanel
-- FTabSheet
 - FSlider
 - FRichTextArea
 - FDateField
 - FDateTimeField
 - FAudio
 - FVideo
-- Tree
+- FTree
 
 
 ## Issue tracking
@@ -95,15 +102,24 @@ Ex : TextField => FTextField
 
 Each setter has also its fluent version prefixed with the word "with" instead of "set".
 
-Ex: new FTextField().withCaption("test").withRequiredIndicatorVisible(true).withWidth("100px").withPlaceholder("enter text");
+Ex: `new FTextField().withCaption("test").withRequiredIndicatorVisible(true).withWidth("100px").withPlaceholder("enter text");`
 
 Each fluent class implements a fluent interface which adds the fluent methods. 
 Therefore, it's easy to add fluent functionality to an existing component : just implement the right interface.
 
 Lets say you have a custom ComboBox doing fancy stuff in your project and you want to add fluent way to code it. Implement the FluentComboBox interface.
 
-Ex : public class MyComboBox<T> extends ComboBox<T> implements FluentComboBox<MyComboBox<T>, T> {...}
+Ex :
+    public class MyComboBox<T> extends ComboBox<T> implements FluentComboBox<MyComboBox<T>, T> {
+
+    }
+
+## Limitations
+
+When using a component using a listing (with T generic type) like FComboBox for example, the generic type must be specified with the constructor when using fluent methods.
+
+Ex: `FComboBox<MyPojo> myComboBox = new FComboBox<MyPojo>().withCaption("My combo box");`
 
 ## API
 
-Fluent API for Vaadin JavaDoc is available online at <...>
+Fluent API for Vaadin JavaDoc is available online at [https://viydaag.github.io/vaadin-fluent-api/docs/javadoc](https://viydaag.github.io/vaadin-fluent-api/docs/javadoc)
