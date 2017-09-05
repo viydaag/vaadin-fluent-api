@@ -11,6 +11,7 @@ import com.vaadin.ui.MultiSelect;
  * @see MultiSelect
  * 
  * @param <THIS> Self-referential generic THIS
+ * @param <VALUE> Value object type in the listing
  */
 public interface FluentMultiSelect<THIS, VALUE>
         extends MultiSelect<VALUE>, FluentHasValue<THIS, Set<VALUE>> {
