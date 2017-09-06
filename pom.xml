@@ -32,12 +32,12 @@
 		<url>https://github.com/viydaag/vaadin-fluent-api</url>
 	</organization>
 
-	<scm>
-		<url>https://github.com/viydaag/vaadin-fluent-api</url>
-		<connection>scm:git:git://github.com/viydaag/vaadin-fluent-api.git</connection>
-		<developerConnection>scm:git:ssh://git@github.com:viydaag/vaadin-fluent-api.git</developerConnection>
-		<tag>1.0</tag>
-	</scm>
+<!-- 	<scm> -->
+<!-- 		<url>https://github.com/viydaag/vaadin-fluent-api</url> -->
+<!-- 		<connection>scm:git:git://github.com/viydaag/vaadin-fluent-api.git</connection> -->
+<!-- 		<developerConnection>scm:git:ssh://git@github.com:viydaag/vaadin-fluent-api.git</developerConnection> -->
+<!-- 		<tag>1.0</tag> -->
+<!-- 	</scm> -->
 
 	<issueManagement>
 		<system>GitHub</system>
