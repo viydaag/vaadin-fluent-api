@@ -114,6 +114,7 @@ Therefore, it's easy to add fluent functionality to an existing component : just
 Lets say you have a custom ComboBox doing fancy stuff in your project and you want to add fluent way to code it. Implement the FluentComboBox interface.
 
 Ex :
+
     public class MyComboBox<T> extends ComboBox<T> implements FluentComboBox<MyComboBox<T>, T> {
      
     }
