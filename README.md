@@ -51,12 +51,8 @@ Note that Eclipse may give "Plugin execution not covered by lifecycle configurat
 - fix missing methods for FluentComboBox
 - update javadoc
 
-## Roadmap
+### Version 1.2
 
-This component is developed as a hobby with no public roadmap or any guarantees of upcoming releases. That said, the following features are planned for upcoming releases:
-
-- FGrid
-- FTreeGrid
 - FMenuBar
 - FProgressBar
 - FPopupView
@@ -65,7 +61,15 @@ This component is developed as a hobby with no public roadmap or any guarantees 
 - FSlider
 - FRichTextArea
 - FDateField
+- FInlineDateField
 - FDateTimeField
+
+## Roadmap
+
+This component is developed as a hobby with no public roadmap or any guarantees of upcoming releases. That said, the following features are planned for upcoming releases:
+
+- FGrid
+- FTreeGrid
 - FAudio
 - FVideo
 - FTree
@@ -111,7 +115,7 @@ Lets say you have a custom ComboBox doing fancy stuff in your project and you wa
 
 Ex :
     public class MyComboBox<T> extends ComboBox<T> implements FluentComboBox<MyComboBox<T>, T> {
-
+     
     }
 
 ## Limitations
