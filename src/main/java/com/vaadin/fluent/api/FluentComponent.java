@@ -249,19 +249,34 @@ public interface FluentComponent<THIS extends FluentComponent<THIS>>
      * removing those defined in other layers.
      * </p>
      *
-     * @param styles
+     * @param style
      *            the new style or styles of the component as a space-separated
      *            list
-     * @return this (for method chaining)
+     * @return this for method chaining
      * @see #getStyleName()
      * @see #addStyleName(String)
      * @see #removeStyleName(String)
      */
     @SuppressWarnings("unchecked")
+    public default THIS withStyleName(String style) {
+        this.setStyleName(style);
+        return (THIS) this;
+    }
+
+    /**
+     * Adds one or more style names to this component by using one or multiple
+     * parameters.
+     *
+     * @param styles
+     *            the style name or style names to be added to the component
+     * @return this for method chaining
+     * @see #addStyleName(String)
+     * @see #setStyleName(String)
+     * @see #removeStyleName(String)
+     */
+    @SuppressWarnings("unchecked")
     public default THIS withStyleName(String... styles) {
-        for (String styleName : styles) {
-            addStyleName(styleName);
-        }
+        this.addStyleNames(styles);
         return (THIS) this;
     }
 
