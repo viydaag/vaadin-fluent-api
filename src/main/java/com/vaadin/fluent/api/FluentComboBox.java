@@ -36,7 +36,6 @@ public interface FluentComboBox<THIS extends FluentComboBox<THIS, ITEM>, ITEM>
      * @see ComboBox#setItemCaptionGenerator(ItemCaptionGenerator)
      */
     @SuppressWarnings("unchecked")
-    @Override
     public default THIS withItemCaptionGenerator(ItemCaptionGenerator<ITEM> itemCaptionGenerator) {
         ((ComboBox<ITEM>) this).setItemCaptionGenerator(itemCaptionGenerator);
         return (THIS) this;

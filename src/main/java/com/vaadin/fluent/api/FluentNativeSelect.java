@@ -27,7 +27,6 @@ public interface FluentNativeSelect<THIS extends FluentNativeSelect<THIS, ITEM>,
      * @see NativeSelect#setItemCaptionGenerator(ItemCaptionGenerator)
      */
     @SuppressWarnings("unchecked")
-    @Override
     public default THIS withItemCaptionGenerator(ItemCaptionGenerator<ITEM> itemCaptionGenerator) {
         ((NativeSelect<ITEM>) this).setItemCaptionGenerator(itemCaptionGenerator);
         return (THIS) this;

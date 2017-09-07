@@ -17,7 +17,6 @@ import com.vaadin.ui.ItemCaptionGenerator;
 public interface FluentAbstractMultiSelect<THIS extends FluentAbstractMultiSelect<THIS, VALUE>, VALUE>
         extends FluentAbstractListing<THIS, VALUE>, FluentMultiSelect<THIS, VALUE> {
 
-    @Override
     @SuppressWarnings("unchecked")
     public default THIS withItemCaptionGenerator(ItemCaptionGenerator<VALUE> itemCaptionGenerator) {
         ((AbstractMultiSelect<VALUE>) this).setItemCaptionGenerator(itemCaptionGenerator);
