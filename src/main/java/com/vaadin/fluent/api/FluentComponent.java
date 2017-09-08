@@ -3,8 +3,10 @@ package com.vaadin.fluent.api;
 import com.vaadin.server.Resource;
 import com.vaadin.ui.Button;
 import com.vaadin.ui.Component;
+import com.vaadin.ui.ComponentContainer;
 import com.vaadin.ui.CustomComponent;
 import com.vaadin.ui.FormLayout;
+import com.vaadin.ui.HasComponents;
 import com.vaadin.ui.Panel;
 import com.vaadin.ui.VerticalLayout;
 
@@ -313,6 +315,38 @@ public interface FluentComponent<THIS extends FluentComponent<THIS>>
     @SuppressWarnings("unchecked")
     public default THIS withVisible(boolean visible) {
         this.setVisible(visible);
+        return (THIS) this;
+    }
+
+    /**
+     * Sets the parent connector of the component.
+     *
+     * <p>
+     * This method automatically calls {@link #attach()} if the component
+     * becomes attached to the session, regardless of whether it was attached
+     * previously. Conversely, if the component currently is attached to the
+     * session, {@link #detach()} is called for the connector before attaching
+     * it to a new parent.
+     * </p>
+     * <p>
+     * This method is rarely called directly.
+     * {@link ComponentContainer#addComponent(Component)} or a
+     * {@link HasComponents} specific method is normally used for adding
+     * components to a parent and the used method will call this method
+     * implicitly.
+     * </p>
+     *
+     * @param parent
+     *            the parent connector
+     * @return this (for method chaining)
+     * @see #setParent(HasComponents)
+     * @throws IllegalStateException
+     *             if a parent is given even though the connector already has a
+     *             parent
+     */
+    @SuppressWarnings("unchecked")
+    public default THIS withParent(HasComponents parent) {
+        this.setParent(parent);
         return (THIS) this;
     }
 
