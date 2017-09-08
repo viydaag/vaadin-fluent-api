@@ -46,7 +46,6 @@ public interface FluentRadioButtonGroup<THIS extends FluentRadioButtonGroup<THIS
      * @see RadioButtonGroup#setItemCaptionGenerator(ItemCaptionGenerator)
      */
     @SuppressWarnings("unchecked")
-    @Override
     public default THIS withItemCaptionGenerator(ItemCaptionGenerator<ITEM> itemCaptionGenerator) {
         ((RadioButtonGroup<ITEM>) this).setItemCaptionGenerator(itemCaptionGenerator);
         return (THIS) this;

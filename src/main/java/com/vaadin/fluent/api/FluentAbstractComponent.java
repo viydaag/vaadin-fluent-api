@@ -4,13 +4,14 @@ import java.util.Locale;
 
 import com.vaadin.event.ShortcutListener;
 import com.vaadin.server.ErrorMessage;
+import com.vaadin.shared.ui.ContentMode;
 import com.vaadin.ui.AbstractComponent;
 
 /**
  * The base interface for fluent versions of {@link AbstractComponent}
  *
- * @param <THIS>
- *            Self-referential generic THIS
+ * @param <THIS> Self-referential generic THIS
+ * 
  * @see AbstractComponent
  */
 public interface FluentAbstractComponent<THIS extends FluentAbstractComponent<THIS>>
@@ -83,6 +84,29 @@ public interface FluentAbstractComponent<THIS extends FluentAbstractComponent<TH
     }
 
     /**
+     * Sets the component's description using given content {@code mode}. See
+     * {@link #getDescription()} for more information on what the description
+     * is.
+     * <p>
+     * If the content {@code mode} is {@literal ContentMode.HTML} the
+     * description is displayed as HTML in tooltips or directly in certain
+     * components so care should be taken to avoid creating the possibility for
+     * HTML injection and possibly XSS vulnerabilities.
+     *
+     * @param description
+     *            the new description string for the component.
+     * @param mode
+     *            the content mode for the description
+     * @return this (for method chaining)
+     * @see AbstractComponent#setDescription(String, ContentMode)
+     */
+    @SuppressWarnings("unchecked")
+    public default THIS withDescription(String description, ContentMode mode) {
+        ((AbstractComponent) this).setDescription(description, mode);
+        return (THIS) this;
+    }
+
+    /**
      * Sets the component'THIS error message.
      *
      * @param componentError
@@ -137,6 +161,32 @@ public interface FluentAbstractComponent<THIS extends FluentAbstractComponent<TH
     @SuppressWarnings("unchecked")
     public default THIS withResponsive(boolean responsive) {
         ((AbstractComponent) this).setResponsive(responsive);
+        return (THIS) this;
+    }
+
+    /**
+     * Adds or removes a style name. Multiple styles can be specified as a
+     * space-separated list of style names.
+     *
+     * If the {@code add} parameter is true, the style name is added to the
+     * component. If the {@code add} parameter is false, the style name is
+     * removed from the component.
+     * <p>
+     * Functionally this is equivalent to using {@link #addStyleName(String)} or
+     * {@link #removeStyleName(String)}
+     *
+     * @param style
+     *            the style name to be added or removed
+     * @param add
+     *            <code>true</code> to add the given style, <code>false</code> to remove it
+     *            
+     * @return this for method chaining           
+     * @see #addStyleName(String)
+     * @see #removeStyleName(String)
+     */
+    @SuppressWarnings("unchecked")
+    public default THIS withStyleName(String style, boolean add) {
+        ((AbstractComponent) this).setStyleName(style, add);
         return (THIS) this;
     }
 
