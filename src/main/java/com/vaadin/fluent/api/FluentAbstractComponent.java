@@ -10,8 +10,8 @@ import com.vaadin.ui.AbstractComponent;
 /**
  * The base interface for fluent versions of {@link AbstractComponent}
  *
- * @param <THIS>
- *            Self-referential generic THIS
+ * @param <THIS> Self-referential generic THIS
+ * 
  * @see AbstractComponent
  */
 public interface FluentAbstractComponent<THIS extends FluentAbstractComponent<THIS>>

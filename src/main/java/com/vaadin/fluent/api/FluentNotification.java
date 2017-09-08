@@ -48,6 +48,7 @@ public interface FluentNotification<THIS extends Notification>
      * Sets the description part of the notification message.
      *
      * @param description
+     *              the description part of the notification message
      * @return this for method chaining
      * @see Notification#setDescription(String)
      */
