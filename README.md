@@ -48,8 +48,6 @@ Note that Eclipse may give "Plugin execution not covered by lifecycle configurat
 - FLink
 - FCheckBox
 - FTabSheet
-- fix missing methods for FluentComboBox
-- update javadoc
 
 ### Version 1.2
 
@@ -64,20 +62,32 @@ Note that Eclipse may give "Plugin execution not covered by lifecycle configurat
 - FInlineDateField
 - FDateTimeField
 
+### Version 1.3
+
+- FGrid
+- FTree
+- FTreeGrid
+- FAudio
+- FVideo
+- FPasswordField
+- FAccordion
+- FWindow
+- FUpload
+- FNotification
+- FCustomLayout
+- FColorPicker
+- FColorPickerArea
+
 ## Roadmap
 
 This component is developed as a hobby with no public roadmap or any guarantees of upcoming releases. That said, the following features are planned for upcoming releases:
 
-- FGrid
-- FTreeGrid
-- FAudio
-- FVideo
-- FTree
+- All fluent components are implemented. If new components or new setter methods are available in newer Vaadin releases, they will be implemented. In any case, you can write an issue for missing methods or components.
 
 
 ## Issue tracking
 
-The issues for this add-on are tracked on its github.com page. All bug reports and feature requests are appreciated. 
+The issues for this add-on are tracked on its github.com [page](https://github.com/viydaag/vaadin-fluent-api/issues). All bug reports and feature requests are appreciated. 
 
 ## Contributions
 
