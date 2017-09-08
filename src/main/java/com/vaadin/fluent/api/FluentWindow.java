@@ -12,6 +12,13 @@ import com.vaadin.ui.Window.ResizeListener;
 import com.vaadin.ui.Window.WindowModeChangeListener;
 import com.vaadin.ui.Window.WindowOrderChangeListener;
 
+/**
+ * The base interface for fluent versions of {@link Window}
+ * 
+ * @see Window
+ *
+ * @param <THIS> Self-referential generic THIS
+ */
 public interface FluentWindow<THIS extends FluentWindow<THIS>>
         extends FluentPanel<THIS>, FluentFocusNotifier<THIS>, FluentBlurNotifier<THIS> {
 
