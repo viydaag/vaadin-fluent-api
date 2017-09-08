@@ -4,7 +4,7 @@ This library is a Vaadin 8 server side complement to code components fluently (l
 
 ## Download release
 
-Official releases of this add-on are available at Vaadin Directory. For Maven instructions, download and reviews, go to [http://vaadin.com/addon/fluent](http://vaadin.com/addon/fluent)
+Official releases of this add-on are available at Vaadin Directory. For Maven instructions, download and reviews, go to [https://vaadin.com/directory#!addon/fluent-api-for-vaadin](https://vaadin.com/directory#!addon/fluent-api-for-vaadin)
 
 ## Development with Eclipse IDE
 
